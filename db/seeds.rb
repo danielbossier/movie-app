@@ -12,5 +12,7 @@ actor = Actor.new({ first_name: "Kit", last_name: "Harrington", known_for: "Game
 actor.save
 
 movie = Movie.new({ title: "Goodfellas", year: 1990, plot: "All Henry's life he wanted to be a ganster. Too bad it involves a lot of burried bodies and cocaine." })
+movie.save
 
 movie = Movie.new({ title: "Jaws", year: 1975, plot: "They could have used a bigger boat." })
+movie.save

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get "/display_actor" => "actors#display_actor"
 
   get "/all_movies" => "movies#all_movies"
+
+  get "/first_movie" => "movies#first_movie"
 end
