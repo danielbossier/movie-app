@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get "/all_movies" => "movies#all_movies"
 
   get "/first_movie" => "movies#first_movie"
+
+  get "single_actor/:select" => "movies#single_actor"
 end
