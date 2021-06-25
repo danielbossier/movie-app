@@ -1,2 +1,5 @@
 class Movie < ApplicationRecord
+  validates :title, length: { minimum: 2 }
+  validates :plot, presence: true
+  validates :year, numericality: { greater_than: 1850 }
 end
