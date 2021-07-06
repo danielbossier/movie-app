@@ -16,3 +16,21 @@
 
 # movie = Movie.new({ title: "Jaws", year: 1975, plot: "They could have used a bigger boat." })
 # movie.save
+
+# genre = Genre.new(name: "drama")
+# genre.save
+
+# genre = Genre.new(name: "western")
+# genre.save
+
+# genre = Genre.new(name: "blockbuster")
+# # genre.save
+
+# moviegenre = MovieGenre.new(movie_id: 5, genre_id: 2)
+# moviegenre.save
+
+# moviegenre = MovieGenre.new(movie_id: 2, genre_id: 3)
+# moviegenre.save
+
+# moviegenre = MovieGenre.new(movie_id: 1, genre_id: 1)
+# moviegenre.save
