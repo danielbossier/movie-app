@@ -8,4 +8,9 @@ class Movie < ApplicationRecord
   validates :year, numericality: { greater_than: 1850 }
   validates :director, length: { minimum: 2 }
   validates :english, presence: true
+
+  def genre_names
+    genres = Genre.all
+    render json: genres
+  end
 end
