@@ -10,4 +10,9 @@ class MovieGenresController < ApplicationController
       render json: { errors: movie_genre.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def index
+    movie_genres = MovieGenre.all
+    render json: movie_genres.as_json
+  end
 end
