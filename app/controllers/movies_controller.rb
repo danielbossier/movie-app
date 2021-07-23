@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :authenticate_admin, except: [:index, :show]
+  before_action :authenticate_user, except: [:index, :show]
 
   def index
     movie = Movie.all
@@ -14,9 +14,14 @@ class MoviesController < ApplicationController
       plot: params["plot"],
       director: params["director"],
       english: params["english"],
+      user_id: current_user.id,
     )
-    movie.save
-    render json: movie.as_json
+    if movie.save
+      render json: movie.as_json
+    else
+      render json: { errors: movie.errors.full_messages },
+             status: 422
+    end
   end
 
   def show
