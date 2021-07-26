@@ -39,7 +39,7 @@ class MoviesController < ApplicationController
     movie.director = params["director"] || movie.director
     movie.english = params["english"] || movie.english
     if movie.save
-      render json: movie
+      render json: movie.as_json
     else
       render json: { errors: movie.errors.full_messages }, status: :unprocessable_entity
     end
